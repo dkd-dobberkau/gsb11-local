@@ -1,0 +1,22 @@
+# IDE
+.idea/
+.vscode/
+
+# DDEV
+.ddev/.homeadditions/
+
+# Sensitive files
+*.env
+*.env.local
+auth.json
+
+# Build artifacts
+.build/
+var/
+
+# Composer
+vendor/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2024 Bundesrepublik Deutschland, vertreten durch das BMI/ITZBund
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+# Note: If you import the gsb_core typoscript template here, it is recommended
+# to import *all* static typoscript templates from all gsb_* extensions here.
+#
+# Mixing imports and static template includes in the TYPO3 backend will lead
+# to a misleading state.
+#
+# @import 'EXT:gsb_core/Configuration/TypoScript/constants.typoscript'

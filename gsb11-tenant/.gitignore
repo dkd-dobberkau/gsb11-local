@@ -1,0 +1,9 @@
+.idea/
+.build
+vendor
+.php-cs-fixer.cache
+var
+devops/chart/charts
+gsb-base-config
+gsb-base-config.zip
+auth.json

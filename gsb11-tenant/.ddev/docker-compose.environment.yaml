@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: 2024 Bundesrepublik Deutschland, vertreten durch das BMI/ITZBund
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+version: '3.6'
+
+services:
+  web:
+    environment:
+      - FRONTEND_DOMAIN=${DDEV_SITENAME}.${DDEV_TLD}
+      - BACKEND_DOMAIN=${DDEV_SITENAME}-backend.${DDEV_TLD}
+      - TYPO3__SYS__trustedHostsPattern=${DDEV_SITENAME}.${DDEV_TLD}|${DDEV_SITENAME}-backend.${DDEV_TLD}
+      - TYPO3__SYS__features__brandingBackendLogin=true
+      - TYPO3__APPLICATION__context=Development/Local
+      - TYPO3__DB__Connections__Default__dbname=db
+      - TYPO3__DB__Connections__Default__host=db
+      - TYPO3__DB__Connections__Default__password=db
+      - TYPO3__DB__Connections__Default__user=db
+      - TYPO3__EXTENSIONS__backend__backendFavicon=EXT:gsb_core/Resources/Public/Favicons/favicon-32x32.png
+      - TYPO3__EXTENSIONS__backend__backendLogo=EXT:gsb_core/Resources/Public/Favicons/favicon.ico
+      - TYPO3__EXTENSIONS__backend__loginBackgroundImage=EXT:gsb_core/Resources/Public/Images/bg.jpg
+      - TYPO3__EXTENSIONS__backend__loginFootnote=© GSB - ITZBund
+      - TYPO3__EXTENSIONS__backend__loginHighlightColor=#004b76
+      - TYPO3__EXTENSIONS__backend__loginLogo=EXT:gsb_core/Resources/Public/Favicons/web-app-manifest-192x192.png
+      - TYPO3__EXTENSIONS__backend__loginLogoAlt=GSB - ITZBund
+      - TYPO3__EXTENSIONS__gsb_core__additionalAllowedFileExtensionsForUploadsElement=docx,xlsx
+      - TYPO3__EXTENSIONS__gsb_core__allowedAudioDomains='*.bund.de'
+      - TYPO3__EXTENSIONS__gsb_core__allowedVideoDomains='*.bund.de'

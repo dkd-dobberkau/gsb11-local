@@ -1,0 +1,79 @@
+# SPDX-FileCopyrightText: 2024 Bundesrepublik Deutschland, vertreten durch das BMI/ITZBund
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+---
+base: 'https://%env(FRONTEND_DOMAIN)%/'
+baseVariants:
+  -
+    base: 'https://%env(BACKEND_DOMAIN)%/'
+    condition: 'host == "%env(BACKEND_DOMAIN)%"'
+dependencies:
+  - itzbund-gsb/default
+errorHandling:
+  -
+    errorCode: 404
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=13'
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    locale: de_DE.UTF-8
+    iso-639-1: de
+    websiteTitle: ''
+    navigationTitle: ''
+    hreflang: de
+    direction: ltr
+    flag: de
+    languageId: 0
+    base: /
+    solr_core_read: core_de
+  -
+    title: English
+    enabled: true
+    locale: en_GB.UTF-8
+    iso-639-1: en
+    websiteTitle: ''
+    navigationTitle: English
+    hreflang: en
+    direction: ltr
+    fallbackType: strict
+    fallbacks: '0'
+    flag: gb
+    languageId: 1
+    base: /en/
+    solr_core_read: core_en
+  -
+    title: Français
+    enabled: true
+    locale: fr_FR.UTF-8
+    base: /fr/
+    websiteTitle: ''
+    navigationTitle: Français
+    fallbackType: strict
+    fallbacks: '0'
+    flag: fr
+    languageId: 2
+    hreflang: fr
+    solr_core_read: core_fr
+logo: logotext
+rootPageId: 1
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    map:
+      /: 0
+      sitemap.xml: 1533906435
+      consent.html: 1698966471
+routes:
+  -
+    route: robots.txt
+    type: staticText
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\n"
+solr_enabled_read: true
+solr_host_read: '%env(SOLR_USERNAME)%:%env(SOLR_PASSWORD)%@%env(SOLR_HOST)%'
+solr_path_read: '%env(SOLR_PATH)%'
+solr_port_read: '%env(SOLR_PORT)%'
+solr_scheme_read: '%env(SOLR_SCHEMA)%'
+solr_use_write_connection: false
+websiteTitle: ''
