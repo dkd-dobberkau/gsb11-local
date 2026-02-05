@@ -4,9 +4,13 @@ Lokale Installation des **Government Site Builder 11** (GSB11) - das TYPO3-basie
 
 ## Quick Start
 
+Diese Installation nutzt [DDEV](https://ddev.com/) als lokale Entwicklungsumgebung. Der Sitepackage Kickstarter konfiguriert automatisch einen vollständigen DDEV-Stack mit PHP 8.3, MySQL und allen benötigten Tools.
+
 ```bash
 curl -sL https://gitlab.opencode.de/bmi/government-site-builder-11/extensions/gsb-sitepackage-kickstarter/-/raw/main/install.sh | bash
 ```
+
+Nach der Installation: `ddev launch` für das Frontend, `ddev launch /typo3` für das Backend.
 
 ## Documentation
 
