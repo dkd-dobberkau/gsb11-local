@@ -2,6 +2,10 @@
 .idea/
 .vscode/
 
+# Claude Code
+CLAUDE.md
+.claude/
+
 # DDEV
 .ddev/.homeadditions/
 
