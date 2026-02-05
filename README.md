@@ -38,4 +38,4 @@ Nach der Installation: `ddev launch` für das Frontend, `ddev launch /typo3` fü
 
 ## License
 
-GPL-3.0-or-later
+GPL-2.0-or-later
